@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>Регистрация</title>
+</head>
+
+<body>
+  <section>
+
+    <div class="container">
+
+      <form name="formReg" class="form" novalidate>
+        <h1>Регистрация</h1>
+        <label for="RegName">Имя:</label>
+        <input type="text" placeholder="Введите имя" name="RegName" required minlength="2" maxlength="20" />
+        <p class="error-message" id="errorName"></p>
+        <br />
+
+        <label for="RegEmail">Email:</label>
+        <input type="email" name="RegEmail" placeholder="Введите Email" required />
+        <p class="error-message" id="errorEmail"></p><br />
+        <label for="RegAge">Возраст:</label>
+        <input type="number" name="RegAge" placeholder="Введите возраст" required />
+        <p class="error-message" id="errorAge"></p><br />
+        <div>
+          <input type="radio" name="RegSex" value="женский" />
+          <span>женский</span>
+        </div>
+        <div>
+          <input type="radio" name="RegSex" value="мужской" />
+          <span>мужской</span>
+          <p class="error-message" id="errorSex"></p>
+        </div><br />
+        <select name="RegSelect" required placeholder="Укажите профессию">
+          <option selected>Укажите профессию</option>
+          <option value="Врач">Врач</option>
+          <option value="Программист">Программист</option>
+          <option value="Учитель">Учитель</option>
+          <option value="Инженер">Инженер</option>
+          <option value="Биолог">Биолог</option>
+          <option value="Менеджер">Другое</option>
+        </select>
+        <p class="error-message" id="errorSelect"></p><br />
+        <label for="RegPassword">Пароль:</label>
+        <input type="password" name="RegPassword" placeholder="Пароль" required minlength="8" />
+        <p class="error-message" id="errorPassword"></p>
+        <br />
+        <div>
+          <input type="checkbox" name="checkboxReg" required />
+          <label for="checkboxReg">Согласие на обработку данных</label>
+          <p class="error-message" id="errorCheckbox"></p>
+        </div><br />
+        <button type="submit" id="RegButton" name="RegButton" class="form__button" disabled>Отправить</button>
+      </form>
+    </div>
+
+  </section>
+  <script src="index.js"></script>
+</body>
+
+</html>
